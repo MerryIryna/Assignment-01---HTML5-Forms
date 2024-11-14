@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend><span class="circle">1</span> Account Info</legend>
+        <label for="name" class="visually-hidden">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Full name..." required>
+
+        <label for="email" class="visually-hidden">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Email Address..." required>
+
+        <label for="password" class="visually-hidden">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password..." 
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{12,}" 
+               title="Must contain at least one uppercase, one lowercase, a number, a symbol, and at least 12 characters" 
+               required>
+        <small>Minimum 12 characters. Must include uppercase, lowercase, number, and symbol.</small>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="circle">2</span> Dev Skills</legend>
+        <p>Core Languages</p>
+        <label><input type="checkbox" name="languages[]" value="HTML"> HTML</label>
+        <label><input type="checkbox" name="languages[]" value="CSS"> CSS</label>
+        <label><input type="checkbox" name="languages[]" value="JavaScript"> JavaScript</label>
+        <label><input type="checkbox" name="languages[]" value="PHP"> PHP</label>
+        <label><input type="checkbox" name="languages[]" value="C#"> C#</label>
+        <label><input type="checkbox" name="languages[]" value="Kotlin"> Kotlin</label>
+
+        <p>Libraries / Frameworks</p>
+        <label><input type="checkbox" name="frameworks[]" value="React"> React</label>
+        <label><input type="checkbox" name="frameworks[]" value="Angular"> Angular</label>
+        <label><input type="checkbox" name="frameworks[]" value="Vue.js"> Vue.js</label>
+
+        <p>Dev Ops</p>
+        <label><input type="checkbox" name="devops[]" value="GIT"> GIT</label>
+        <label><input type="checkbox" name="devops[]" value="Gulp"> Gulp</label>
+        <label><input type="checkbox" name="devops[]" value="Docker"> Docker</label>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="circle">3</span> Experience</legend>
+        <label><input type="radio" name="experience" value="Beginner" required> Beginner</label>
+        <label><input type="radio" name="experience" value="Intermediate"> Intermediate</label>
+        <label><input type="radio" name="experience" value="Advanced"> Advanced</label>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="circle">4</span> Other</legend>
+        <label for="hear-about" class="visually-hidden">How did you hear about us?</label>
+        <select id="hear-about" name="hear-about" required>
+          <optgroup label="Online">
+            <option value="Google">Google</option>
+            <option value="Social Media">Social Media</option>
+          </optgroup>
+          <optgroup label="Offline">
+            <option value="Word of Mouth">Word of Mouth</option>
+            <option value="Events">Events</option>
+          </optgroup>
+          <option value="Magic!">Magic!</option>
+          <option value="Other...">Other...</option>
+        </select>
+
+        <div id="additional-details" class="hidden">
+          <label for="comments">Additional Details</label>
+          <textarea id="comments" name="comments" placeholder="Please provide details..."></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset" class="clear-button">Clear Form</button>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

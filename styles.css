@@ -1,0 +1,71 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    background: linear-gradient(135deg, #0fefdb, #11999e);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  main {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px;
+  }
+  
+  form fieldset {
+    border: none;
+    margin-bottom: 20px;
+  }
+  
+  legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .circle {
+    display: inline-block;
+    background: #007b7f;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    border-color: #00a6a3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 166, 163, 0.5);
+  }
+  
+  button {
+    background: #007b7f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button.clear-button {
+    background: red;
+    margin-left: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
